@@ -26,7 +26,8 @@ organizzando il layout dividendo la struttura ed i contenuti in file e parziali 
 */
 
 
-class Movie  {
+/* class Movie  {
+
     public $id;
     public $title; 
     public $originalTitle;
@@ -34,33 +35,49 @@ class Movie  {
     public $language;
     public $vote;
 
-    function __construct($id,$title)
+    function __construct($title, $id)
     {
         $this->id = $id;
         $this->title = $title;
     }
 
-    function getInfo() {
-        
+    public function getInfo() {
+        return $this->id;
+        return $this->title;
+     
     }
 
 
+}
+
+$film1 = new Movie("Titolo");
+
+echo $film1 -> getInfo(); */
 
 
-};
+
+
+
+class Movie {
+    public $title;
+    public $originalTitle;
+  
+    function __construct($title, $originalTitle) {
+      $this->title = $title;
+      $this->originalTitle = $originalTitle;
+    }
+    function get_title() {
+      return $this->title;
+    }
+    function get_original() {
+        return $this->originalTitle;
+      }
+  }
+  
+  $film1 = new Movie("Titolo", "Title");
+  echo $film1->get_title();
+  echo '<br>';
+  echo $film1->get_original();
 
 
 ?>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
