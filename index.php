@@ -97,6 +97,8 @@ class Movie {
   //Creo una variabile del singolo obj dal quale prendero le seguenti info
   // con l'aiuto dei metodi scritti in precedenza
   $film1 = new Movie("Titolo", "Original_Title");
+  
+  //Ho utilizzato il nome Strawberry per dire un nome a caso XD
   $film2= new Strawberry("Titolo", "Original_Title");
 
     //Echo stampa a schermo
