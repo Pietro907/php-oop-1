@@ -59,17 +59,19 @@ echo $film1 -> getInfo(); */
 
 //Creo una classe Movie che conterrà un serie di variabili/Obj
 // Di Default tutte le istanze sono pubbliche
-class Movie {
+class Movie
+{
     //varibile titolo
     public $title;
     //variabile titolo originale
     public $originalTitle;
-  
+
     //Funzione __construct con il quale assegno un valore alla variabile dicendo 
     //di prendere il valore seguente ($this->title))
-    function __construct($title, $originalTitle) {
-      $this->title = $title;
-      $this->originalTitle = $originalTitle;
+    function __construct($title, $originalTitle)
+    {
+        $this->title = $title;
+        $this->originalTitle = $originalTitle;
     }
     //Creo una funzione con multi echo
     /* function get_info(){
@@ -77,45 +79,50 @@ class Movie {
         echo $this->originalTitle;
     } */
     //Creo un metodo per farmi ritonare il valore assegnato alla variabile
-    function get_title() {
-      return $this->title;
+    function get_title()
+    {
+        return $this->title;
     }
 
     //Creo un metodo per farmi ritonare il valore assegnato alla variabile
-    function get_original() {
+    function get_original()
+    {
         return $this->originalTitle;
-      }
-  }
-  class Strawberry extends Movie {
-    public function message() {
-      echo "{$this->title} <--> Titolo? "; 
     }
-  }
-  
+}
 
-  //Fuori dalla classe
-  //Creo una variabile del singolo obj dal quale prendero le seguenti info
-  // con l'aiuto dei metodi scritti in precedenza
-  $film1 = new Movie("Titolo", "Original_Title");
-  
-  //Ho utilizzato il nome Strawberry per dire un nome a caso XD
-  $film2= new Strawberry("Titolo", "Original_Title");
-
-    //Echo stampa a schermo
-    echo $film1->get_title();
-    echo '<br>';
-    echo $film1->get_original();
-    echo '<br>';
-    echo $film2->message();
-    echo '<br>';
-    echo '<br>';
-    echo '<br>';
-    
+class Strawberry extends Movie
+{
+    public function message()
+    {
+        echo "{$this->title} <--> Titolo? ";
+    }
+}
 
 
-  //Echo stampa a schermo
-  echo $film2->get_title();
-  echo '<br>';
-  echo $film2->get_original();
-  echo '<br>';
-  echo $film2->message();
+//Fuori dalla classe
+//Creo una variabile del singolo obj dal quale prendero le seguenti info
+// con l'aiuto dei metodi scritti in precedenza
+$film1 = new Movie("Titolo", "Original_Title");
+
+//Ho utilizzato il nome Strawberry per dire un nome a caso XD
+$film2 = new Strawberry("Titolo", "Original_Title");
+
+//Echo stampa a schermo
+echo $film1->get_title();
+echo '<br>';
+echo $film1->get_original();
+echo '<br>';
+echo $film2->message();
+echo '<br>';
+echo '<br>';
+echo '<br>';
+
+
+
+//Echo stampa a schermo
+echo $film2->get_title();
+echo '<br>';
+echo $film2->get_original();
+echo '<br>';
+echo $film2->message();
