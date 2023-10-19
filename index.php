@@ -57,24 +57,39 @@ echo $film1 -> getInfo(); */
 
 
 
-
+//Creo una classe Movie che conterrà un serie di variabili/Obj
+// Di Default tutte le istanze sono pubbliche
 class Movie {
+    //varibile titolo
     public $title;
+    //variabile titolo originale
     public $originalTitle;
   
+    //Funzione __construct con il quale assegno un valore alla variabile dicendo 
+    //di prendere il valore seguente ($this->title))
     function __construct($title, $originalTitle) {
       $this->title = $title;
       $this->originalTitle = $originalTitle;
     }
+
+    //Creo un metodo per farmi ritonare il valore assegnato alla variabile
     function get_title() {
       return $this->title;
     }
+
+    //Creo un metodo per farmi ritonare il valore assegnato alla variabile
     function get_original() {
         return $this->originalTitle;
       }
   }
   
-  $film1 = new Movie("Titolo", "Title");
+
+  //Fuori dalla classe
+  //Creo una variabile del singolo obj dal quale prendero le seguenti info
+  // con l'aiuto dei metodi scritti in precedenza
+  $film1 = new Movie("Titolo", "Original_Title");
+
+  //Echo stampa a schermo
   echo $film1->get_title();
   echo '<br>';
   echo $film1->get_original();
