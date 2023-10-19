@@ -71,7 +71,11 @@ class Movie {
       $this->title = $title;
       $this->originalTitle = $originalTitle;
     }
-
+    //Creo una funzione con multi echo
+    /* function get_info(){
+        echo $this->title;
+        echo $this->originalTitle;
+    } */
     //Creo un metodo per farmi ritonare il valore assegnato alla variabile
     function get_title() {
       return $this->title;
@@ -82,17 +86,34 @@ class Movie {
         return $this->originalTitle;
       }
   }
+  class Strawberry extends Movie {
+    public function message() {
+      echo "{$this->title} <--> Titolo? "; 
+    }
+  }
   
 
   //Fuori dalla classe
   //Creo una variabile del singolo obj dal quale prendero le seguenti info
   // con l'aiuto dei metodi scritti in precedenza
   $film1 = new Movie("Titolo", "Original_Title");
+  $film2= new Strawberry("Titolo", "Original_Title");
+
+    //Echo stampa a schermo
+    echo $film1->get_title();
+    echo '<br>';
+    echo $film1->get_original();
+    echo '<br>';
+    echo $film2->message();
+    echo '<br>';
+    echo '<br>';
+    echo '<br>';
+    
+
 
   //Echo stampa a schermo
-  echo $film1->get_title();
+  echo $film2->get_title();
   echo '<br>';
-  echo $film1->get_original();
-
-
-?>
+  echo $film2->get_original();
+  echo '<br>';
+  echo $film2->message();
