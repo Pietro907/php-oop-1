@@ -109,6 +109,24 @@ $film1 = new Movie("Titolo", "Original_Title");
 $film2 = new Strawberry("Titolo", "Original_Title");
 
 //Echo stampa a schermo
+echo ' <div class="container">
+<div class="row">
+    <div class="col">
+        <div class="card">
+            <h3> <?php echo $film1->get_title() ?> </h3>
+            <h5>original_title</h5>
+            <p>vote</p>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <h3></h3>
+            <h5></h5>
+            <p></p>
+        </div>
+    </div>
+</div>
+</div>';
 echo $film1->get_title();
 echo '<br>';
 echo $film1->get_original();
@@ -126,3 +144,42 @@ echo '<br>';
 echo $film2->get_original();
 echo '<br>';
 echo $film2->message();
+
+?>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+
+<div class="container">
+<div class="row">
+    <div class="col">
+        <div class="card">
+            <h3><?php echo $film1->get_title() ?></h3>
+            <p><?php echo $film1->get_original() ?></p>
+            <h5><?php echo $film2->message() ?></h5>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <h3></h3>
+            <h5></h5>
+            <p></p>
+        </div>
+    </div>
+</div>
+</div>
+
+</body>
+
+</html>
